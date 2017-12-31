@@ -28,7 +28,7 @@ export default {
     ...
     svelte({
       preprocess: {
-        style: less(/* object of less options (optional) */),
+        style: less(),
       },
     }),
   ],
@@ -36,3 +36,32 @@ export default {
 ```
 
 Now all `<style>` elements in your components that have a `type="text/less"` or `lang="less"` attribute will be preprocessed by less.
+
+### Passing options to less
+
+The `less` function passes the first argument to the less compiler, e.g.:
+
+```javascript
+...
+less({
+  plugins: [
+    ...
+  ]
+})
+```
+
+
+### Filtering styles
+
+The `less` function passes the second argument to [svelte-preprocess-filter](https://github.com/ls-age/svelte-preprocess-filter), e.g.:
+
+```javascript
+...
+less(
+  {} // Empty less options
+  { all: true } // Preprocess all styles
+)
+```
+
+For available options visit [the less documentation](http://lesscss.org/usage/#programmatic-usage).
+

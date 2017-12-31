@@ -1,10 +1,14 @@
-import { render as renderLess } from 'less';
+import { default as lessCompiler } from 'less';
 import { style as filter } from 'svelte-preprocess-filter';
 
-export async function preprocessLess(lessOptions = {}, { filename, content, attributes }) {
-  if (!filter(attributes, 'less')) { return null; }
+export async function preprocessLess(
+  lessOptions = {},
+  filterOptions = {},
+  { filename, content, attributes }
+) {
+  if (!filter(Object.assign({ name: 'less' }, filterOptions), { attributes })) { return null; }
 
-  const { css, map } = await renderLess(content, Object.assign({
+  const { css, map } = await lessCompiler.render(content, Object.assign({
     filename,
     sourceMap: {},
   }, lessOptions));
@@ -12,6 +16,6 @@ export async function preprocessLess(lessOptions = {}, { filename, content, attr
   return { code: css, map };
 }
 
-export function less(lessOptions) {
-  return preprocessLess.bind(null, lessOptions);
+export function less(lessOptions, filterOptions) {
+  return preprocessLess.bind(null, lessOptions, filterOptions);
 }
