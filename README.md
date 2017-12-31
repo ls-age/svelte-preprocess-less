@@ -32,3 +32,5 @@ export default {
   ],
 };
 ```
+
+Now all `<style>` elements in your components that have a `type="text/less"` or `lang="less"` attribute will be preprocessed by less.
