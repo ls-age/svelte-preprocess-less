@@ -26,7 +26,7 @@ export default {
     ...
     svelte({
       preprocess: {
-        style: less(/*  object of less options (optional) */),
+        style: less(/* object of less options (optional) */),
       },
     }),
   ],
