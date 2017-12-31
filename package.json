@@ -1,0 +1,58 @@
+{
+  "name": "svelte-preprocess-less",
+  "version": "0.0.0",
+  "description": "Svelte preprocessor for less",
+  "main": "out/index.js",
+  "module": "out/module.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@ls-age/babel-preset": "^0.4.0",
+    "@ls-age/bump-version": "^0.1.2",
+    "@ls-age/eslint-config": "^0.8.0",
+    "babel-core": "^6.26.0",
+    "eslint": "^4.14.0",
+    "rollup": "^0.53.2",
+    "rollup-plugin-babel": "^3.0.3"
+  },
+  "scripts": {
+    "compile": "rollup -c",
+    "lint": "eslint rollup.config.js src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ls-age/svelte-preprocess-less.git"
+  },
+  "keywords": [
+    "svelte",
+    "preprocess",
+    "less"
+  ],
+  "author": "Lukas Hechenberger <npm@ls-age.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ls-age/svelte-preprocess-less/issues"
+  },
+  "homepage": "https://github.com/ls-age/svelte-preprocess-less#readme",
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 2017
+    },
+    "extends": "@ls-age",
+    "settings": {
+      "import/core-modules": [
+        "less"
+      ]
+    }
+  },
+  "babel": {
+    "presets": [
+      [
+        "@ls-age/babel-preset",
+        {
+          "modules": false
+        }
+      ]
+    ]
+  }
+}
