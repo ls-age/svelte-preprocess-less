@@ -1,5 +1,5 @@
 import { render as renderLess } from 'less';
-import filter from './lib/filter';
+import { style as filter } from 'svelte-preprocess-filter';
 
 export async function preprocessLess(lessOptions = {}, { filename, content, attributes }) {
   if (!filter(attributes, 'less')) { return null; }

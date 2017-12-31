@@ -1,3 +1,4 @@
+import resolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
 
 const dev = process.env.NODE_ENV !== 'production';
@@ -8,6 +9,7 @@ export default {
     'less',
   ],
   plugins: [
+    resolve(),
     babel(),
   ],
   output: [

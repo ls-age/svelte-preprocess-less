@@ -4,7 +4,9 @@
   "description": "Svelte preprocessor for less",
   "main": "out/index.js",
   "module": "out/module.js",
-  "dependencies": {},
+  "dependencies": {
+    "svelte-preprocess-filter": "^0.1.1"
+  },
   "devDependencies": {
     "@ls-age/babel-preset": "^0.4.0",
     "@ls-age/bump-version": "^0.1.2",
@@ -12,7 +14,8 @@
     "babel-core": "^6.26.0",
     "eslint": "^4.14.0",
     "rollup": "^0.53.2",
-    "rollup-plugin-babel": "^3.0.3"
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-node-resolve": "^3.0.0"
   },
   "scripts": {
     "compile": "rollup -c",
