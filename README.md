@@ -1,5 +1,7 @@
 # svelte-preprocess-less
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ls-age/svelte-preprocess-less.svg)](https://greenkeeper.io/)
+
 > Svelte preprocessor for [less](http://lesscss.org)
 
 ## Installation
