@@ -1,5 +1,7 @@
 # svelte-preprocess-less
 
+[![CircleCI](https://circleci.com/gh/ls-age/svelte-preprocess-less.svg?style=svg)](https://circleci.com/gh/ls-age/svelte-preprocess-less)
+[![codecov](https://codecov.io/gh/ls-age/svelte-preprocess-less/branch/master/graph/badge.svg)](https://codecov.io/gh/ls-age/svelte-preprocess-less)
 [![Greenkeeper badge](https://badges.greenkeeper.io/ls-age/svelte-preprocess-less.svg)](https://greenkeeper.io/)
 
 > Svelte preprocessor for [less](http://lesscss.org)
