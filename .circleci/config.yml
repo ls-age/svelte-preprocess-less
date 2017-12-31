@@ -33,6 +33,16 @@ jobs:
           name: Linting source files
           command: npm run lint -- --format junit --output-file ~/reports/eslint.xml
           when: always
+      - run:
+          name: Running tests
+          command: npm run -s test -- --tap | npx tap-xunit > ~/reports/ava.xml
+          when: always
+      - run:
+          name: Report test coverage
+          command: |
+            npx nyc report --reporter=text-lcov > coverage.lcov
+            npx codecov
+          when: always
 
       # Store Results
       - store_test_results:
