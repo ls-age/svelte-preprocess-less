@@ -5,7 +5,7 @@
   "main": "out/index.js",
   "module": "out/module.js",
   "dependencies": {
-    "svelte-preprocess-filter": "^0.1.1"
+    "svelte-preprocess-filter": "^1.0.0"
   },
   "devDependencies": {
     "@ls-age/babel-preset": "^0.4.0",
