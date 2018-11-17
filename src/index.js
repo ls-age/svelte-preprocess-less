@@ -8,12 +8,31 @@ export async function preprocessLess(
 ) {
   if (!filter(Object.assign({ name: 'less' }, filterOptions), { attributes })) { return null; }
 
-  const { css, map } = await lessCompiler.render(content, Object.assign({
-    filename,
-    sourceMap: {},
-  }, lessOptions));
+  try {
+    const { css, map } = await lessCompiler.render(content, Object.assign({
+      filename,
+      sourceMap: {},
+    }, lessOptions));
 
-  return { code: css, map };
+    return { code: css, map };
+  } catch (err) {
+    const { line, column, index: character, extract } = err;
+
+    const frame = extract.map((l, i) => `${(line - 1) + i}:${l}`);
+    frame.splice(2, 0, '^'.padStart(column + line.toString().length + 2));
+
+    delete err.line;
+    delete err.column;
+    delete err.index;
+    delete err.extract;
+    err.frame = frame.join('\n');
+
+    // The line number only counts from the beginning of the <style> tag.
+    err.start = { line, column, character };
+    err.end = err.start;
+
+    throw err;
+  }
 }
 
 export function less(lessOptions, filterOptions) {
