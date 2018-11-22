@@ -17,6 +17,7 @@ export async function preprocessLess(
     return { code: css, map };
   } catch (err) {
     const { line, column, index: character, extract } = err;
+    if (!(line && column && extract)) throw err;
 
     const frame = extract.map((l, i) => `${(line - 1) + i}:${l}`);
     frame.splice(2, 0, '^'.padStart(column + line.toString().length + 2));
