@@ -25,7 +25,7 @@ test('preprocessLess should format errors correctly', async t => {
     content: `b {
   color: @color
 }`,
-}));
+  }));
 
   t.is(error.frame, '1:b {\n2:  color: @color\n           ^\n3:}');
   t.deepEqual(error.start, { line: 2, column: 9, character: 13 });
