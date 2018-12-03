@@ -19,5 +19,5 @@ b { color: @color }`,
 });
 
 test('less should return a function', async t => {
-  t.is(typeof less(), 'function')
+  t.is(typeof less(), 'function');
 });
