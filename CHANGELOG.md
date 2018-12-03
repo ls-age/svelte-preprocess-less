@@ -1,3 +1,14 @@
+<a name="0.3.0-beta.0"></a>
+# 0.3.0-beta.0 (2018-12-03)
+
+
+### Features
+
+* Print pretty errors ([#10](https://github.com/ls-age/svelte-preprocess-less/issues/10)) ([88bbb44](https://github.com/ls-age/svelte-preprocess-less/commits/88bbb44))
+
+
+
+
 <a name="0.2.0"></a>
 # 0.2.0 (2017-12-31)
 
