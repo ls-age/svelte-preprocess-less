@@ -17,7 +17,7 @@
     "eslint": "5.9.0",
     "less": "3.9.0",
     "nyc": "13.3.0",
-    "rollup": "0.67.4",
+    "rollup": "1.10.0",
     "rollup-plugin-babel": "3.0.7",
     "rollup-plugin-node-resolve": "4.2.3"
   },
