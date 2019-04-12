@@ -74,5 +74,13 @@
     "require": [
       "babel-core/register"
     ]
+  },
+  "renovate": {
+    "extends": [
+      "@ls-age"
+    ],
+    "devDependencies": {
+      "automerge": true
+    }
   }
 }
