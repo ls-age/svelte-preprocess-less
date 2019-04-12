@@ -16,7 +16,7 @@
     "codecov": "3.3.0",
     "eslint": "5.9.0",
     "less": "3.9.0",
-    "nyc": "13.1.0",
+    "nyc": "13.3.0",
     "rollup": "0.67.4",
     "rollup-plugin-babel": "3.0.7",
     "rollup-plugin-node-resolve": "3.4.0"
