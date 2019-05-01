@@ -1,6 +1,6 @@
 {
   "name": "svelte-preprocess-less",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Svelte preprocessor for less",
   "main": "out/index.js",
   "module": "out/module.js",

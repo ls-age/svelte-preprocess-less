@@ -1,3 +1,14 @@
+<a name="0.4.0"></a>
+# 0.4.0 (2019-05-01)
+
+
+### Features
+
+* Return imported files as dependencies ([#31](https://github.com/ls-age/svelte-preprocess-less/issues/31)) ([8df4909](https://github.com/ls-age/svelte-preprocess-less/commits/8df4909))
+
+
+
+
 <a name="0.3.0"></a>
 # 0.3.0 (2018-12-03)
 
