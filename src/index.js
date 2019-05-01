@@ -9,12 +9,12 @@ export async function preprocessLess(
   if (!filter(Object.assign({ name: 'less' }, filterOptions), { attributes })) { return null; }
 
   try {
-    const { css, map } = await lessCompiler.render(content, Object.assign({
+    const { css, map, imports } = await lessCompiler.render(content, Object.assign({
       filename,
       sourceMap: {},
     }, lessOptions));
 
-    return { code: css, map };
+    return { code: css, map, dependencies: imports };
   } catch (err) {
     const { line, column, index: character, extract } = err;
     if (!(line && column && extract)) throw err;
