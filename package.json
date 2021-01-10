@@ -15,7 +15,7 @@
     "babel-core": "6.26.3",
     "codecov": "3.8.1",
     "eslint": "6.5.1",
-    "less": "3.12.2",
+    "less": "4.1.0",
     "nyc": "15.1.0",
     "rollup": "2.2.0",
     "rollup-plugin-babel": "4.4.0",
